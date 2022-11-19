@@ -1,5 +1,7 @@
 <template>
-  <slot />
-
-  <div>НАКСТ БОМБА Я ТОГО РОТ ЕБАЛ</div>
+  <div class="main">
+    <Button theme="blue">Кнопка</Button><br />
+    <Input />
+    <Checkbox name="Кнопка" />
+  </div>
 </template>
