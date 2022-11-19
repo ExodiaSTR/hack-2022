@@ -33,6 +33,16 @@
         </NuxtLink>
       </div>
     </section>
+    <section class="main__dagestan">
+      <img
+        src="~/assets/img/dagestan.jpg"
+        alt="Дагестан"
+        class="main__dagestan-img"
+      />
+    </section>
+    <section class="main__slider-wrapper">
+      <Slider />
+    </section>
   </div>
 </template>
 
@@ -65,5 +75,12 @@
   .main__help {
     display: block;
     margin-bottom: 60px;
+  }
+  .main__slider-wrapper {
+    width: 100%;
+    height: 294px;
+
+    overflow: hidden;
+    background-color: transparent;
   }
 </style>
