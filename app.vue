@@ -1,5 +1,3 @@
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+  <div>НАКСТ БОМБА Я ТОГО РОТ ЕБАЛ</div>
 </template>
