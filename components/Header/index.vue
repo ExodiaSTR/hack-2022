@@ -30,6 +30,7 @@
     background: rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid #e5e5e5;
     backdrop-filter: blur(25px);
+    z-index: 2;
   }
   .header__container {
     display: flex;

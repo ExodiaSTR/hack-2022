@@ -33,19 +33,70 @@
         </NuxtLink>
       </div>
     </section>
-    <section class="main__dagestan">
-      <img
-        src="~/assets/img/dagestan.jpg"
-        alt="Дагестан"
-        class="main__dagestan-img"
-      />
-    </section>
-    <section class="main__slider-wrapper">
-      <Slider />
+    <section class="main__slider-wrap">
+      <div class="slider__top">
+        <div class="slider__left">
+          <p class="slider__title">Кажется нашли кое что для вас...</p>
+          <p class="slider__subtitle">
+            Построили экскурсии и туры на основе ваших интересов
+          </p>
+        </div>
+        <NuxtLink to="/tours/" class="slider__link">Смотреть все туры</NuxtLink>
+      </div>
+      <Slider :slider="sliders" />
     </section>
   </div>
 </template>
-
+<script>
+  export default {
+    data() {
+      return {
+        sliders: [
+          {
+            id: 1,
+            img: "slide1",
+            title: "Путешествие к Эльбрусу и озеру Гижгит",
+            time: "12 часов",
+            count: "12 чел",
+            price: "20 000",
+          },
+          {
+            id: 2,
+            img: "slide2",
+            title: "Путешествие к Эльбрусу и озеру Гижгит",
+            time: "12 часов",
+            count: "12 чел",
+            price: "20 000",
+          },
+          {
+            id: 3,
+            img: "slide3",
+            title: "Путешествие к Эльбрусу и озеру Гижгит",
+            time: "9 часов",
+            count: "5 чел",
+            price: "15 000",
+          },
+          {
+            id: 4,
+            img: "slide3",
+            title: "Путешествие к Эльбрусу и озеру Гижгит",
+            time: "9 часов",
+            count: "5 чел",
+            price: "15 000",
+          },
+          {
+            id: 5,
+            img: "slide3",
+            title: "Путешествие к Эльбрусу и озеру Гижгит",
+            time: "9 часов",
+            count: "5 чел",
+            price: "15 000",
+          },
+        ],
+      };
+    },
+  };
+</script>
 <style scoped>
   .top__item {
     display: block;
@@ -76,11 +127,39 @@
     display: block;
     margin-bottom: 60px;
   }
-  .main__slider-wrapper {
+  .main__slider-wrap {
+    margin-top: 60px;
     width: 100%;
-    height: 294px;
 
     overflow: hidden;
     background-color: transparent;
+  }
+
+  .slider__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .slider__title {
+    margin-bottom: 8px;
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 45px;
+  }
+  .slider__subtitle {
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #666666;
+  }
+  .slider__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #26b872;
+    cursor: pointer;
+    text-decoration: none;
   }
 </style>
