@@ -56,5 +56,9 @@
     line-height: 21px;
     text-decoration: none;
     color: #000;
+    transition: all 0.5s;
+  }
+  .header__link:hover {
+    color: #26b872;
   }
 </style>

@@ -1,5 +1,19 @@
 <template>
   <div class="main">
+    <section class="main__dagestan">
+      <img
+        src="~/assets/img/dagestan.jpg"
+        alt="Дагестан"
+        class="main__dagestan-img"
+      />
+    </section>
+    <NuxtLink class="main__help">
+      <img
+        src="~/assets/img/help.jpg"
+        alt="Поможем определиться  с выбором"
+        class="main__dagestan-img"
+      />
+    </NuxtLink>
     <section class="main__top">
       <div class="main__top-title">Возможно вам понравится</div>
       <div class="main__top-items">
@@ -18,13 +32,6 @@
           />
         </NuxtLink>
       </div>
-    </section>
-    <section class="main__dagestan">
-      <img
-        src="~/assets/img/dagestan.jpg"
-        alt="Дагестан"
-        class="main__dagestan-img"
-      />
     </section>
   </div>
 </template>
@@ -52,6 +59,11 @@
     width: 100%;
   }
   .main__dagestan {
-    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .main__help {
+    display: block;
+    margin-bottom: 60px;
   }
 </style>
