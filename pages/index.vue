@@ -26,6 +26,9 @@
         class="main__dagestan-img"
       />
     </section>
+    <section class="main__slider-wrapper">
+      <Slider />
+    </section>
   </div>
 </template>
 
@@ -53,5 +56,12 @@
   }
   .main__dagestan {
     margin-top: 24px;
+  }
+  .main__slider-wrapper {
+    width: 100%;
+    height: 294px;
+
+    overflow: hidden;
+    background-color: transparent;
   }
 </style>
