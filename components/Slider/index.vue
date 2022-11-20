@@ -9,6 +9,7 @@
       v-for="slide in slider"
       :key="slide.id"
       class="main__slider-slide"
+      @click="$router.push('/tours/1/')"
     >
       <!-- <img
         :src="require(`@/assets/img/${slide.img}.jpg`)"
@@ -63,10 +64,10 @@
     width: 100%;
     min-width: 350px;
     height: 294px;
-
     overflow: hidden;
     background-color: gray;
     border-radius: 12px;
+    cursor: pointer;
   }
   .main__slider-slide-img {
     position: absolute;
