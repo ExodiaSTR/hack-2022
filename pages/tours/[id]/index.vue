@@ -15,8 +15,8 @@
             <img src="~/assets/img/tour-e.jpg" class="tour__info-icon" alt="" />
           </div>
           <div class="tour__info-btns">
-            <Button>Оставить заявку</Button>
-            <Button theme="blue">Оставить отзыв</Button>
+            <Button fluid>Оставить заявку</Button>
+            <Button fluid theme="blue">Оставить отзыв</Button>
           </div>
         </div>
         <div class="tour__info-title">
@@ -70,7 +70,7 @@
 <style scoped>
   .container {
     max-width: 1280px;
-    padding: 0px 20px;
+    padding-left: 20px;
     margin: 0 auto;
   }
   .tours__back {
@@ -105,12 +105,11 @@
 
   .tour__top {
     position: relative;
-    min-height: 250px;
     margin: 71px -20px 0;
   }
   .tour__top-img {
     width: 100%;
-    height: 100%;
+    min-height: 250px;
     object-fit: cover;
   }
 
@@ -207,6 +206,7 @@
     margin: 0px -20px;
     flex-wrap: nowrap;
     overflow-x: scroll;
+    margin-top: 30px;
   }
 
   .tour__info-slider::-webkit-scrollbar {
@@ -220,7 +220,35 @@
   }
 
   .tour__info-btns {
+    max-width: 400px;
+    width: 100%;
     display: flex;
     column-gap: 16px;
+  }
+
+  @media (max-width: 800px) {
+    .tour__info-btns {
+      max-width: none;
+      position: fixed;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid #e5e5e5;
+      backdrop-filter: blur(25px);
+      border-radius: 12px 12px 0px 0px;
+      padding: 20px;
+      width: 100%;
+      left: 0;
+    }
+    .tour__info-desc {
+      margin-top: 24px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .tour__info-title {
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 30px;
+    }
   }
 </style>
