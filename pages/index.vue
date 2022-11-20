@@ -6,12 +6,22 @@
         alt="Дагестан"
         class="main__dagestan-img"
       />
+      <img
+        src="~/assets/img/dag05pudge.jpg"
+        alt="Дагестан"
+        class="main__dagestan-img-mobile"
+      />
     </section>
     <NuxtLink class="main__help">
       <img
         src="~/assets/img/help.jpg"
         alt="Поможем определиться  с выбором"
         class="main__dagestan-img"
+      />
+      <img
+        src="~/assets/img/help2.jpg"
+        alt="Поможем определиться  с выбором"
+        class="main__dagestan-img-mobile"
       />
     </NuxtLink>
     <section class="main__top">
@@ -161,5 +171,37 @@
     color: #26b872;
     cursor: pointer;
     text-decoration: none;
+  }
+
+  .main__dagestan-img-mobile {
+    display: none;
+  }
+  @media screen and (max-width: 800px) {
+    .main__dagestan-img {
+      display: none;
+    }
+    .main__dagestan-img-mobile {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
+      height: 100%;
+    }
+    .main__dagestan-img {
+      display: none;
+    }
+    .main__dagestan-img-mobile {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
+      height: 100%;
+    }
+    .main__top-items {
+      flex-direction: column;
+    }
+    .top__item {
+      margin-bottom: 6px;
+    }
   }
 </style>

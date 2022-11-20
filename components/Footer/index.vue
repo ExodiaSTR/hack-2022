@@ -41,4 +41,13 @@
   .footer__item-img {
     width: 100%;
   }
+  @media screen and (max-width: 800px) {
+    .footer__items {
+      flex-direction: column;
+    }
+    .footer__item {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
 </style>
