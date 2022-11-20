@@ -25,6 +25,7 @@
 
 <style>
   .layout {
+    height: 100vh;
     padding: 0px 20px;
     overflow-x: hidden;
   }
