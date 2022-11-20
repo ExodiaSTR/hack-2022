@@ -1,6 +1,5 @@
 <template>
   <Swiper
-    :navigation="true"
     :modules="modules"
     class="main__slider-wrapper"
     :slides-per-view="3"
@@ -29,7 +28,7 @@
 </template>
 
 <script>
-  import { Swiper, SwiperSlide } from "swiper/vue";
+  import { Swiper, SwiperSlide, useSwiper } from "swiper/vue";
   import { Navigation } from "swiper";
   import "swiper/css";
   import "swiper/css/navigation";
@@ -42,6 +41,7 @@
     data() {
       return {
         modules: [Navigation],
+        swiper: useSwiper(),
       };
     },
     props: {
@@ -62,6 +62,7 @@
   .main__slider-slide {
     position: relative;
     width: 100%;
+    min-width: 350px;
     height: 294px;
     overflow: hidden;
     background-color: gray;
@@ -148,5 +149,11 @@
     font-family: "SF Pro Display", sans-serif;
     content: "";
     background-image: url(~/assets/img/icon/right.svg);
+  }
+
+  @media screen and (max-width: 800px) {
+    .slider__link {
+      display: none;
+    }
   }
 </style>

@@ -5,8 +5,23 @@
       <slot />
     </div>
     <Footer />
+    <Modal
+      v-if="showModal"
+      @close="showModal = false"
+      @open="showModal = true"
+    />
   </div>
 </template>
+
+<script>
+  export default {
+    data() {
+      return {
+        showModal: false,
+      };
+    },
+  };
+</script>
 
 <style>
   .layout {
