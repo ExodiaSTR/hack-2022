@@ -80,8 +80,7 @@
     margin-top: 120px;
   }
   .container {
-    max-width: 1280px;
-    padding: 0px 20px;
+    max-width: 1240px;
     margin: 0 auto;
   }
 
@@ -145,5 +144,15 @@
   }
   .product-card:last-child {
     margin-right: 20px;
+  }
+  @media (max-width: 800px) {
+    .tours {
+      margin-top: 85px;
+    }
+    .tours__title {
+      margin: 16px 0 12px;
+      font-size: 32px;
+      line-height: 38px;
+    }
   }
 </style>
