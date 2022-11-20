@@ -1,8 +1,5 @@
 <template>
-  <button
-    :class="['button', `button_${theme}`, { fluid: fluid }]"
-    @click="onClick"
-  >
+  <button :class="['button', `button_${theme}`, { fluid: fluid }]">
     <slot>Текст на кнопке</slot>
   </button>
 </template>
@@ -17,11 +14,6 @@
       theme: {
         type: String,
         default: "green",
-      },
-    },
-    methods: {
-      onClick(e) {
-        this.$emit("click", e);
       },
     },
   };

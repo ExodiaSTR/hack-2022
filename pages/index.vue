@@ -12,7 +12,7 @@
         class="main__dagestan-img-mobile"
       />
     </section>
-    <NuxtLink class="main__help">
+    <NuxtLink to="/assistant/" class="main__help">
       <img
         src="~/assets/img/help.jpg"
         alt="Поможем определиться  с выбором"

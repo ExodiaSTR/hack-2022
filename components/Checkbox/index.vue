@@ -41,6 +41,7 @@
 
 <style scoped>
   .checkbox {
+    position: relative;
     display: flex;
     align-items: center;
     column-gap: 10px;

@@ -6,28 +6,30 @@
       <div class="tours__subtitle">
         Мы вам покажем национальные блюда Дагестана!
       </div>
-      <div class="tours__wrap">
-        <div class="tours__item">
-          <Product
-            v-for="product in products"
-            :key="product.id"
-            :keyTour="false"
-            :link="link"
-            :product="product"
-            class="product-card"
-          />
+      <div class="tours-content">
+        <div class="tours__wrap">
+          <div class="tours__item">
+            <Product
+              v-for="product in products"
+              :key="product.id"
+              :keyTour="false"
+              :link="link"
+              :product="product"
+              class="product-card"
+            />
+          </div>
         </div>
-      </div>
-      <div class="tours__wrap">
-        <div class="tours__item">
-          <Product
-            v-for="(product, index) in products"
-            :key="product.id"
-            :link="link"
-            :keyTour="false"
-            :product="product"
-            class="product-card"
-          />
+        <div class="tours__wrap">
+          <div class="tours__item">
+            <Product
+              v-for="(product, index) in products"
+              :key="product.id"
+              :link="link"
+              :keyTour="false"
+              :product="product"
+              class="product-card"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -66,7 +68,9 @@
     max-width: 1240px;
     margin: 0 auto;
   }
-
+  .tours-content {
+    margin-bottom: 30px;
+  }
   .tours__title {
     margin: 16px 0 8px;
     font-weight: 800;

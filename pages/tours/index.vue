@@ -4,37 +4,39 @@
       <NuxtLink to="/" class="tours__back">Назад на главную</NuxtLink>
       <div class="tours__title">Туры</div>
       <div class="tours__subtitle">Здесь отображены все туры</div>
-      <div class="tours__wrap">
-        <div class="tours__item">
-          <Product
-            v-for="(product, index) in products[0]"
-            :key="product.id"
-            :link="link"
-            :product="product"
-            class="product-card"
-          />
+      <div class="tours-content">
+        <div class="tours__wrap">
+          <div class="tours__item">
+            <Product
+              v-for="(product, index) in products[0]"
+              :key="product.id"
+              :link="link"
+              :product="product"
+              class="product-card"
+            />
+          </div>
         </div>
-      </div>
-      <div class="tours__wrap">
-        <div class="tours__item">
-          <Product
-            v-for="(product, index) in products[0]"
-            :key="product.id"
-            :link="link"
-            :product="product"
-            class="product-card"
-          />
+        <div class="tours__wrap">
+          <div class="tours__item">
+            <Product
+              v-for="(product, index) in products[0]"
+              :key="product.id"
+              :link="link"
+              :product="product"
+              class="product-card"
+            />
+          </div>
         </div>
-      </div>
-      <div class="tours__wrap">
-        <div class="tours__item">
-          <Product
-            v-for="(product, index) in products[0]"
-            :key="product.id"
-            :link="link"
-            :product="product"
-            class="product-card"
-          />
+        <div class="tours__wrap">
+          <div class="tours__item">
+            <Product
+              v-for="(product, index) in products[0]"
+              :key="product.id"
+              :link="link"
+              :product="product"
+              class="product-card"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -93,6 +95,10 @@
     font-weight: 800;
     font-size: 38px;
     line-height: 45px;
+  }
+
+  .tours-content {
+    margin-bottom: 30px;
   }
   .tours__subtitle {
     font-weight: 500;
