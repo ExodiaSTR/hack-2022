@@ -51,16 +51,6 @@
             Построили экскурсии и туры на основе ваших интересов
           </p>
         </div>
-      </div>
-    </section>
-    <section class="main__slider-wrap">
-      <div class="slider__top">
-        <div class="slider__left">
-          <p class="slider__title">Кажется нашли кое что для вас...</p>
-          <p class="slider__subtitle">
-            Построили экскурсии и туры на основе ваших интересов
-          </p>
-        </div>
         <NuxtLink to="/tours/" class="slider__link">Смотреть все туры</NuxtLink>
       </div>
       <Slider :slider="sliders" />
@@ -132,11 +122,13 @@
     line-height: 45px;
   }
   .main__top-items {
+    width: 100%;
     display: flex;
     column-gap: 20px;
   }
   .top__item-img {
     width: 100%;
+    height: 100%;
   }
 
   .main__dagestan-img {
