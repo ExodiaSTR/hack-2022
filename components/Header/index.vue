@@ -29,7 +29,10 @@
         <NuxtLink @click="showModal = !showModal" class="header__link" to="/"
           >Отель</NuxtLink
         >
-        <NuxtLink @click="showModal = !showModal" class="header__link" to="/"
+        <NuxtLink
+          @click="showModal = !showModal"
+          class="header__link"
+          to="/foods/"
           >Еда</NuxtLink
         >
       </div>
