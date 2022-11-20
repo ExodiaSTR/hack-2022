@@ -10,7 +10,7 @@
       </NuxtLink>
       <div class="header__links">
         <NuxtLink class="header__link" to="/tours">Туры / Экскурсии</NuxtLink>
-        <NuxtLink class="header__link" to="/">Отель</NuxtLink>
+        <NuxtLink class="header__link" to="/404/">Отель</NuxtLink>
         <NuxtLink class="header__link" to="/foods/">Еда</NuxtLink>
       </div>
 
