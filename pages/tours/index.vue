@@ -394,6 +394,9 @@
       font-size: 32px;
       line-height: 38px;
     }
+    .slider__link {
+      display: none;
+    }
   }
 </style>
 

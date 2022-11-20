@@ -297,6 +297,20 @@
     .top__item {
       margin-bottom: 6px;
     }
+
+    .slider__link {
+      display: none;
+    }
+    .slider__title {
+      font-weight: 800;
+      font-size: 25px;
+      line-height: 30px;
+
+      color: #000000;
+    }
+    .main__slider-wrap {
+      margin-top: 30px;
+    }
   }
 </style>
 
