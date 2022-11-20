@@ -6,15 +6,15 @@
     :space-between="20"
   >
     <SwiperSlide
-      v-for="slide in slider"
+      v-for="slide in slides"
       :key="slide.id"
       class="main__slider-slide"
       @click="$router.push('/tours/1/')"
     >
-      <!-- <img
+      <img
         :src="require(`@/assets/img/${slide.img}.jpg`)"
         class="main__slider-slide-img"
-      /> -->
+      />
       <div class="main__slider-info">
         <span class="main__slider-slide-title">{{ slide.title }}</span>
         <div class="main__slider-slider-subinfo">
@@ -45,14 +45,9 @@
       };
     },
     props: {
-      slider: {
+      slides: {
         type: Array,
         default: () => [],
-      },
-    },
-    methods: {
-      getImgUrl(pic) {
-        return require("../assets/" + pic);
       },
     },
   };
@@ -131,7 +126,7 @@
   }
 </style>
 
-<style>
+<style scoped>
   .swiper-button-prev,
   .swiper-button-next {
     width: auto;
