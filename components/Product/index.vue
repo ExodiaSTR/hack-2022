@@ -1,12 +1,24 @@
 <template>
-  <NuxtLink to="/tours/1" class="product">
-    <img class="product__img" src="~/assets/img/slide1.jpg" alt="" />
+  <NuxtLink :to="link" class="product">
+    <img
+      v-if="keyTour"
+      class="product__img"
+      src="~/assets/img/slide1.jpg"
+      alt=""
+    />
+    <img v-else class="product__img" src="~/assets/img/food1.jpg" alt="" />
     <div class="main__slider-info">
       <span class="main__slider-slide-title">{{ product.title }}</span>
       <div class="main__slider-slider-subinfo">
-        <div class="main__slider-slider-time">{{ product.time }}</div>
-        <div class="main__slider-slider-peoples">{{ product.count }}</div>
-        <div class="main__slider-slider-cost">₽ {{ product.price }}</div>
+        <div v-if="product.time" class="main__slider-slider-time">
+          {{ product.time }}
+        </div>
+        <div v-if="product.count" class="main__slider-slider-peoples">
+          {{ product.count }}
+        </div>
+        <div v-if="product.price" class="main__slider-slider-cost">
+          ₽ {{ product.price }}
+        </div>
       </div>
     </div>
   </NuxtLink>
@@ -18,6 +30,13 @@
       product: {
         type: Object,
         default: () => {},
+      },
+      keyTour: {
+        type: Boolean,
+        default: true,
+      },
+      link: {
+        type: String,
       },
     },
   };

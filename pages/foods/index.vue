@@ -1,14 +1,17 @@
 <template>
   <div class="tours">
     <div class="container">
-      <NuxtLink to="/" class="tours__back">Назад на главную</NuxtLink>
-      <div class="tours__title">Туры</div>
-      <div class="tours__subtitle">Здесь отображены все туры</div>
+      <NuxtLink :to="link" class="tours__back">Назад на главную</NuxtLink>
+      <div class="tours__title">Национальные блюда</div>
+      <div class="tours__subtitle">
+        Мы вам покажем национальные блюда Дагестана!
+      </div>
       <div class="tours__wrap">
         <div class="tours__item">
           <Product
-            v-for="(product, index) in products[0]"
+            v-for="product in products"
             :key="product.id"
+            :keyTour="false"
             :link="link"
             :product="product"
             class="product-card"
@@ -18,20 +21,10 @@
       <div class="tours__wrap">
         <div class="tours__item">
           <Product
-            v-for="(product, index) in products[0]"
+            v-for="(product, index) in products"
             :key="product.id"
             :link="link"
-            :product="product"
-            class="product-card"
-          />
-        </div>
-      </div>
-      <div class="tours__wrap">
-        <div class="tours__item">
-          <Product
-            v-for="(product, index) in products[0]"
-            :key="product.id"
-            :link="link"
+            :keyTour="false"
             :product="product"
             class="product-card"
           />
@@ -46,34 +39,20 @@
     data() {
       return {
         products: [
-          [
-            {
-              id: 1,
-              img: "~/assets/img/slide1.jpg",
-              title: "Путешествие к Эльбрусу и озеру Гижгит",
-              time: "12 часов",
-              count: "12 чел",
-              price: "20 000",
-            },
-            {
-              id: 2,
-              imgKey: "slide2",
-              title: "Путешествие к Эльбрусу и озеру Гижгит",
-              time: "12 часов",
-              count: "12 чел",
-              price: "20 000",
-            },
-            {
-              id: 3,
-              imgKey: "slide3",
-              title: "Путешествие к Эльбрусу и озеру Гижгит",
-              time: "9 часов",
-              count: "5 чел",
-              price: "15 000",
-            },
-          ],
+          {
+            id: 1,
+            title: "Чуду",
+          },
+          {
+            id: 2,
+            title: "Аварский хинкал",
+          },
+          {
+            id: 3,
+            title: "Курзе",
+          },
         ],
-        link: "/tours/1",
+        link: "/foods/1",
       };
     },
   };
