@@ -1,50 +1,54 @@
 <template>
-  <div class="main">
-    <section class="main__dagestan">
-      <img
-        src="~/assets/img/dagestan.jpg"
-        alt="Дагестан"
-        class="main__dagestan-img"
-      />
-    </section>
-    <NuxtLink class="main__help">
-      <img
-        src="~/assets/img/help.jpg"
-        alt="Поможем определиться  с выбором"
-        class="main__dagestan-img"
-      />
-    </NuxtLink>
-    <section class="main__top">
-      <div class="main__top-title">Возможно вам понравится</div>
-      <div class="main__top-items">
-        <NuxtLink to="/" class="top__item">
-          <img
-            src="~/assets/img/food-banner.jpg"
-            alt="Национальная еда Дагестана"
-            class="top__item-img"
-          />
-        </NuxtLink>
-        <NuxtLink to="/" class="top__item">
-          <img
-            src="~/assets/img/factoid.jpg"
-            alt="Национальная еда Дагестана"
-            class="top__item-img"
-          />
-        </NuxtLink>
-      </div>
-    </section>
-    <section class="main__slider-wrap">
-      <div class="slider__top">
-        <div class="slider__left">
-          <p class="slider__title">Кажется нашли кое что для вас...</p>
-          <p class="slider__subtitle">
-            Построили экскурсии и туры на основе ваших интересов
-          </p>
+  <div class="container">
+    <div class="main">
+      <section class="main__dagestan">
+        <img
+          src="~/assets/img/dagestan.jpg"
+          alt="Дагестан"
+          class="main__dagestan-img"
+        />
+      </section>
+      <NuxtLink class="main__help">
+        <img
+          src="~/assets/img/help.jpg"
+          alt="Поможем определиться  с выбором"
+          class="main__dagestan-img"
+        />
+      </NuxtLink>
+      <section class="main__top">
+        <div class="main__top-title">Возможно вам понравится</div>
+        <div class="main__top-items">
+          <NuxtLink to="/" class="top__item">
+            <img
+              src="~/assets/img/food-banner.jpg"
+              alt="Национальная еда Дагестана"
+              class="top__item-img"
+            />
+          </NuxtLink>
+          <NuxtLink to="/" class="top__item">
+            <img
+              src="~/assets/img/factoid.jpg"
+              alt="Национальная еда Дагестана"
+              class="top__item-img"
+            />
+          </NuxtLink>
         </div>
-        <NuxtLink to="/tours/" class="slider__link">Смотреть все туры</NuxtLink>
-      </div>
-      <Slider :slider="sliders" />
-    </section>
+      </section>
+      <section class="main__slider-wrap">
+        <div class="slider__top">
+          <div class="slider__left">
+            <p class="slider__title">Кажется нашли кое что для вас...</p>
+            <p class="slider__subtitle">
+              Построили экскурсии и туры на основе ваших интересов
+            </p>
+          </div>
+          <NuxtLink to="/tours/" class="slider__link"
+            >Смотреть все туры</NuxtLink
+          >
+        </div>
+        <Slider :slider="sliders" />
+      </section>
+    </div>
   </div>
 </template>
 <script>
@@ -102,6 +106,9 @@
     display: block;
     max-width: 680px;
   }
+  .main {
+    margin-top: 100px;
+  }
   .main__top-title {
     margin-bottom: 16px;
     font-weight: 800;
@@ -133,6 +140,11 @@
 
     overflow: hidden;
     background-color: transparent;
+  }
+  .container {
+    max-width: 1280px;
+    padding: 0px 20px;
+    margin: 0 auto;
   }
 
   .slider__top {

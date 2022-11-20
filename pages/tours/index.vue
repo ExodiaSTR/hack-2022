@@ -1,36 +1,38 @@
 <template>
   <div class="tours">
-    <NuxtLink to="/" class="tours__back">Назад на главную</NuxtLink>
-    <div class="tours__title">Туры</div>
-    <div class="tours__subtitle">Здесь отображены все туры</div>
-    <div class="tours__wrap">
-      <div class="tours__item">
-        <Product
-          v-for="(product, index) in products[0]"
-          :key="product.id"
-          :product="product"
-          class="product-card"
-        />
+    <div class="container">
+      <NuxtLink to="/" class="tours__back">Назад на главную</NuxtLink>
+      <div class="tours__title">Туры</div>
+      <div class="tours__subtitle">Здесь отображены все туры</div>
+      <div class="tours__wrap">
+        <div class="tours__item">
+          <Product
+            v-for="(product, index) in products[0]"
+            :key="product.id"
+            :product="product"
+            class="product-card"
+          />
+        </div>
       </div>
-    </div>
-    <div class="tours__wrap">
-      <div class="tours__item">
-        <Product
-          v-for="(product, index) in products[0]"
-          :key="product.id"
-          :product="product"
-          class="product-card"
-        />
+      <div class="tours__wrap">
+        <div class="tours__item">
+          <Product
+            v-for="(product, index) in products[0]"
+            :key="product.id"
+            :product="product"
+            class="product-card"
+          />
+        </div>
       </div>
-    </div>
-    <div class="tours__wrap">
-      <div class="tours__item">
-        <Product
-          v-for="(product, index) in products[0]"
-          :key="product.id"
-          :product="product"
-          class="product-card"
-        />
+      <div class="tours__wrap">
+        <div class="tours__item">
+          <Product
+            v-for="(product, index) in products[0]"
+            :key="product.id"
+            :product="product"
+            class="product-card"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -76,6 +78,11 @@
 <style scoped>
   .tours {
     margin-top: 120px;
+  }
+  .container {
+    max-width: 1280px;
+    padding: 0px 20px;
+    margin: 0 auto;
   }
 
   .tours__title {

@@ -1,5 +1,5 @@
 <template>
-  <div class="product">
+  <NuxtLink to="/tours/1" class="product">
     <img class="product__img" src="~/assets/img/slide1.jpg" alt="" />
     <div class="main__slider-info">
       <span class="main__slider-slide-title">{{ product.title }}</span>
@@ -9,7 +9,7 @@
         <div class="main__slider-slider-cost">₽ {{ product.price }}</div>
       </div>
     </div>
-  </div>
+  </NuxtLink>
 </template>
 
 <script>
