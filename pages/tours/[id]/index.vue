@@ -105,10 +105,13 @@
 
   .tour__top {
     position: relative;
+    min-height: 250px;
     margin: 71px -20px 0;
   }
   .tour__top-img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .tour__info {
