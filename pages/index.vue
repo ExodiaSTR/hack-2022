@@ -51,22 +51,21 @@
             Построили экскурсии и туры на основе ваших интересов
           </p>
         </div>
-      </section>
-      <section class="main__slider-wrap">
-        <div class="slider__top">
-          <div class="slider__left">
-            <p class="slider__title">Кажется нашли кое что для вас...</p>
-            <p class="slider__subtitle">
-              Построили экскурсии и туры на основе ваших интересов
-            </p>
-          </div>
-          <NuxtLink to="/tours/" class="slider__link"
-            >Смотреть все туры</NuxtLink
-          >
+      </div>
+    </section>
+
+    <section class="main__slider-wrap">
+      <div class="slider__top">
+        <div class="slider__left">
+          <p class="slider__title">Кажется нашли кое что для вас...</p>
+          <p class="slider__subtitle">
+            Построили экскурсии и туры на основе ваших интересов
+          </p>
         </div>
-        <Slider :slider="sliders" />
-      </section>
-    </div>
+        <NuxtLink to="/tours/" class="slider__link">Смотреть все туры</NuxtLink>
+      </div>
+      <Slider :slider="sliders" />
+    </section>
   </div>
 </template>
 <script>
