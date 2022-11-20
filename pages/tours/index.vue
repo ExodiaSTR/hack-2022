@@ -6,36 +6,258 @@
       <div class="tours__subtitle">Здесь отображены все туры</div>
       <div class="tours-content">
         <div class="tours__wrap">
-          <div class="tours__item">
-            <Product
-              v-for="(product, index) in products[0]"
-              :key="product.id"
-              :link="link"
-              :product="product"
-              class="product-card"
-            />
+          <div class="main__slider">
+            <Swiper
+              :modules="modules"
+              class="main__slider-wrapper"
+              :slides-per-view="3"
+              :space-between="20"
+            >
+              <SwiperSlide
+                class="main__slider-slide"
+                @click="$router.push('/tours/1/')"
+              >
+                <img
+                  src="@/assets/img/slide1.jpg"
+                  class="main__slider-slide-img"
+                />
+                <div class="main__slider-info">
+                  <span class="main__slider-slide-title"
+                    >Путешествие к Эльбрусу и озеру Гижгит</span
+                  >
+                  <div class="main__slider-slider-subinfo">
+                    <div class="main__slider-slider-time">12 часов</div>
+                    <div class="main__slider-slider-peoples">12 чел</div>
+                    <div class="main__slider-slider-cost">₽ 20 000</div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide
+                class="main__slider-slide"
+                @click="$router.push('/tours/1/')"
+              >
+                <img
+                  src="@/assets/img/slide2.jpg"
+                  class="main__slider-slide-img"
+                />
+                <div class="main__slider-info">
+                  <span class="main__slider-slide-title"
+                    >Прогулка на катере по Сулакскому Каньону</span
+                  >
+                  <div class="main__slider-slider-subinfo">
+                    <div class="main__slider-slider-time">12 часов</div>
+                    <div class="main__slider-slider-peoples">12 чел</div>
+                    <div class="main__slider-slider-cost">₽ 5 000</div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide
+                class="main__slider-slide"
+                @click="$router.push('/tours/1/')"
+              >
+                <img
+                  src="@/assets/img/slide3.jpg"
+                  class="main__slider-slide-img"
+                />
+                <div class="main__slider-info">
+                  <span class="main__slider-slide-title"
+                    >Увидеть вживую Хунзахский водопат</span
+                  >
+                  <div class="main__slider-slider-subinfo">
+                    <div class="main__slider-slider-time">12 часов</div>
+                    <div class="main__slider-slider-peoples">12 чел</div>
+                    <div class="main__slider-slider-cost">₽ 11 000</div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide
+                class="main__slider-slide"
+                @click="$router.push('/tours/1/')"
+              >
+                <img
+                  src="@/assets/img/slide4.jpg"
+                  class="main__slider-slide-img"
+                />
+                <div class="main__slider-info">
+                  <span class="main__slider-slide-title">Бархан Сарыкум></span>
+                  <div class="main__slider-slider-subinfo">
+                    <div class="main__slider-slider-time">12 часов</div>
+                    <div class="main__slider-slider-peoples">12 чел</div>
+                    <div class="main__slider-slider-cost">₽ 11 000</div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
         <div class="tours__wrap">
-          <div class="tours__item">
-            <Product
-              v-for="(product, index) in products[0]"
-              :key="product.id"
-              :link="link"
-              :product="product"
-              class="product-card"
-            />
+          <div class="main__slider">
+            <Swiper
+              :modules="modules"
+              class="main__slider-wrapper"
+              :slides-per-view="3"
+              :space-between="20"
+            >
+              <SwiperSlide
+                class="main__slider-slide"
+                @click="$router.push('/tours/1/')"
+              >
+                <img
+                  src="@/assets/img/slide1.jpg"
+                  class="main__slider-slide-img"
+                />
+                <div class="main__slider-info">
+                  <span class="main__slider-slide-title"
+                    >Путешествие к Эльбрусу и озеру Гижгит</span
+                  >
+                  <div class="main__slider-slider-subinfo">
+                    <div class="main__slider-slider-time">12 часов</div>
+                    <div class="main__slider-slider-peoples">12 чел</div>
+                    <div class="main__slider-slider-cost">₽ 20 000</div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide
+                class="main__slider-slide"
+                @click="$router.push('/tours/1/')"
+              >
+                <img
+                  src="@/assets/img/slide2.jpg"
+                  class="main__slider-slide-img"
+                />
+                <div class="main__slider-info">
+                  <span class="main__slider-slide-title"
+                    >Прогулка на катере по Сулакскому Каньону</span
+                  >
+                  <div class="main__slider-slider-subinfo">
+                    <div class="main__slider-slider-time">12 часов</div>
+                    <div class="main__slider-slider-peoples">12 чел</div>
+                    <div class="main__slider-slider-cost">₽ 5 000</div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide
+                class="main__slider-slide"
+                @click="$router.push('/tours/1/')"
+              >
+                <img
+                  src="@/assets/img/slide3.jpg"
+                  class="main__slider-slide-img"
+                />
+                <div class="main__slider-info">
+                  <span class="main__slider-slide-title"
+                    >Увидеть вживую Хунзахский водопат</span
+                  >
+                  <div class="main__slider-slider-subinfo">
+                    <div class="main__slider-slider-time">12 часов</div>
+                    <div class="main__slider-slider-peoples">12 чел</div>
+                    <div class="main__slider-slider-cost">₽ 11 000</div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide
+                class="main__slider-slide"
+                @click="$router.push('/tours/1/')"
+              >
+                <img
+                  src="@/assets/img/slide4.jpg"
+                  class="main__slider-slide-img"
+                />
+                <div class="main__slider-info">
+                  <span class="main__slider-slide-title">Бархан Сарыкум></span>
+                  <div class="main__slider-slider-subinfo">
+                    <div class="main__slider-slider-time">12 часов</div>
+                    <div class="main__slider-slider-peoples">12 чел</div>
+                    <div class="main__slider-slider-cost">₽ 11 000</div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
         <div class="tours__wrap">
-          <div class="tours__item">
-            <Product
-              v-for="(product, index) in products[0]"
-              :key="product.id"
-              :link="link"
-              :product="product"
-              class="product-card"
-            />
+          <div class="main__slider">
+            <Swiper
+              :modules="modules"
+              class="main__slider-wrapper"
+              :slides-per-view="3"
+              :space-between="20"
+            >
+              <SwiperSlide
+                class="main__slider-slide"
+                @click="$router.push('/tours/1/')"
+              >
+                <img
+                  src="@/assets/img/slide1.jpg"
+                  class="main__slider-slide-img"
+                />
+                <div class="main__slider-info">
+                  <span class="main__slider-slide-title"
+                    >Путешествие к Эльбрусу и озеру Гижгит</span
+                  >
+                  <div class="main__slider-slider-subinfo">
+                    <div class="main__slider-slider-time">12 часов</div>
+                    <div class="main__slider-slider-peoples">12 чел</div>
+                    <div class="main__slider-slider-cost">₽ 20 000</div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide
+                class="main__slider-slide"
+                @click="$router.push('/tours/1/')"
+              >
+                <img
+                  src="@/assets/img/slide2.jpg"
+                  class="main__slider-slide-img"
+                />
+                <div class="main__slider-info">
+                  <span class="main__slider-slide-title"
+                    >Прогулка на катере по Сулакскому Каньону</span
+                  >
+                  <div class="main__slider-slider-subinfo">
+                    <div class="main__slider-slider-time">12 часов</div>
+                    <div class="main__slider-slider-peoples">12 чел</div>
+                    <div class="main__slider-slider-cost">₽ 5 000</div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide
+                class="main__slider-slide"
+                @click="$router.push('/tours/1/')"
+              >
+                <img
+                  src="@/assets/img/slide3.jpg"
+                  class="main__slider-slide-img"
+                />
+                <div class="main__slider-info">
+                  <span class="main__slider-slide-title"
+                    >Увидеть вживую Хунзахский водопат</span
+                  >
+                  <div class="main__slider-slider-subinfo">
+                    <div class="main__slider-slider-time">12 часов</div>
+                    <div class="main__slider-slider-peoples">12 чел</div>
+                    <div class="main__slider-slider-cost">₽ 11 000</div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide
+                class="main__slider-slide"
+                @click="$router.push('/tours/1/')"
+              >
+                <img
+                  src="@/assets/img/slide4.jpg"
+                  class="main__slider-slide-img"
+                />
+                <div class="main__slider-info">
+                  <span class="main__slider-slide-title">Бархан Сарыкум></span>
+                  <div class="main__slider-slider-subinfo">
+                    <div class="main__slider-slider-time">12 часов</div>
+                    <div class="main__slider-slider-peoples">12 чел</div>
+                    <div class="main__slider-slider-cost">₽ 11 000</div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </div>
@@ -44,7 +266,15 @@
 </template>
 
 <script>
+  import { Swiper, SwiperSlide, useSwiper } from "swiper/vue";
+  import { Navigation } from "swiper";
+  import "swiper/css";
+  import "swiper/css/navigation";
   export default {
+    components: {
+      Swiper,
+      SwiperSlide,
+    },
     data() {
       return {
         products: [
@@ -146,7 +376,7 @@
   .tours__wrap {
     display: flex;
     flex-direction: column;
-    margin: 24px -60px 0;
+    margin-bottom: 30px;
   }
 
   .product-card:first-child {
@@ -164,5 +394,80 @@
       font-size: 32px;
       line-height: 38px;
     }
+  }
+</style>
+
+<style scoped>
+  /* SLIDER */
+
+  .main__slider-slide {
+    position: relative;
+    width: 100%;
+    min-width: 350px;
+    height: 294px;
+    overflow: hidden;
+    background-color: gray;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .main__slider-slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  .main__slider-info {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  }
+  .main__slider-slide-title {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+
+    padding-bottom: 16px;
+    color: white;
+  }
+  .main__slider-slider-subinfo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .main__slider-slider-time {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #ffffff;
+  }
+  .main__slider-slider-peoples {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #ffffff;
+  }
+  .main__slider-slider-cost {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #ffffff;
   }
 </style>

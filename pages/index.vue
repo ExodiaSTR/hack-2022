@@ -110,6 +110,20 @@
             </div>
           </div>
         </SwiperSlide>
+        <SwiperSlide
+          class="main__slider-slide"
+          @click="$router.push('/tours/1/')"
+        >
+          <img src="@/assets/img/slide4.jpg" class="main__slider-slide-img" />
+          <div class="main__slider-info">
+            <span class="main__slider-slide-title">Бархан Сарыкум></span>
+            <div class="main__slider-slider-subinfo">
+              <div class="main__slider-slider-time">12 часов</div>
+              <div class="main__slider-slider-peoples">12 чел</div>
+              <div class="main__slider-slider-cost">₽ 11 000</div>
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </div>
   </div>
@@ -208,8 +222,12 @@
     display: block;
     margin-bottom: 60px;
   }
+  .main__slider {
+    margin-bottom: 60px;
+  }
   .main__slider-wrap {
     margin-top: 60px;
+
     width: 100%;
 
     overflow: hidden;

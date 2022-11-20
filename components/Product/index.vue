@@ -6,7 +6,7 @@
       src="~/assets/img/slide1.jpg"
       alt=""
     />
-    <img v-else class="product__img" src="~/assets/img/food1.jpg" alt="" />
+    <img v-else :src="product.img" class="product__img" alt="" />
     <div class="main__slider-info">
       <span class="main__slider-slide-title">{{ product.title }}</span>
       <div class="main__slider-slider-subinfo">

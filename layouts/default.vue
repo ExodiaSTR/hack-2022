@@ -33,6 +33,7 @@
   }
   .layout__content {
     max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
     flex: 1 1 auto;
   }
